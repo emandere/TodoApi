@@ -1,0 +1,14 @@
+C:\Users\emand\Desktop\WebProjects\TodoApi\bin\Release\netcoreapp2.1\TodoApi.deps.json
+C:\Users\emand\Desktop\WebProjects\TodoApi\bin\Release\netcoreapp2.1\TodoApi.runtimeconfig.json
+C:\Users\emand\Desktop\WebProjects\TodoApi\bin\Release\netcoreapp2.1\TodoApi.runtimeconfig.dev.json
+C:\Users\emand\Desktop\WebProjects\TodoApi\bin\Release\netcoreapp2.1\TodoApi.dll
+C:\Users\emand\Desktop\WebProjects\TodoApi\bin\Release\netcoreapp2.1\TodoApi.pdb
+C:\Users\emand\Desktop\WebProjects\TodoApi\obj\Release\netcoreapp2.1\TodoApi.csprojAssemblyReference.cache
+C:\Users\emand\Desktop\WebProjects\TodoApi\obj\Release\netcoreapp2.1\TodoApi.csproj.CoreCompileInputs.cache
+C:\Users\emand\Desktop\WebProjects\TodoApi\obj\Release\netcoreapp2.1\TodoApi.RazorAssemblyInfo.cache
+C:\Users\emand\Desktop\WebProjects\TodoApi\obj\Release\netcoreapp2.1\TodoApi.RazorAssemblyInfo.cs
+C:\Users\emand\Desktop\WebProjects\TodoApi\obj\Release\netcoreapp2.1\TodoApi.AssemblyInfoInputs.cache
+C:\Users\emand\Desktop\WebProjects\TodoApi\obj\Release\netcoreapp2.1\TodoApi.AssemblyInfo.cs
+C:\Users\emand\Desktop\WebProjects\TodoApi\obj\Release\netcoreapp2.1\TodoApi.RazorTargetAssemblyInfo.cache
+C:\Users\emand\Desktop\WebProjects\TodoApi\obj\Release\netcoreapp2.1\TodoApi.dll
+C:\Users\emand\Desktop\WebProjects\TodoApi\obj\Release\netcoreapp2.1\TodoApi.pdb
