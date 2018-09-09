@@ -13,4 +13,5 @@ RUN dotnet publish -c Release -o out
 FROM microsoft/dotnet:aspnetcore-runtime
 WORKDIR /TodoApi
 COPY --from=build-env /TodoApi/out .
+EXPOSE 5000
 ENTRYPOINT ["dotnet", "TodoApi.dll"]
