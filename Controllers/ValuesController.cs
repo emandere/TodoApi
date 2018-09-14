@@ -23,7 +23,7 @@ namespace TodoApi.Controllers
             MongoServer _server;
             MongoDatabase _db;
 
-             _client = new MongoClient("mongodb://testdbuser:testpass@mongodb");
+             _client = new MongoClient("mongodb://testdbuser:testpass@mongodb/sampledb");
             _server = _client.GetServer();
             _db = _server.GetDatabase("sampledb");
             var pairs = new List<String>();
