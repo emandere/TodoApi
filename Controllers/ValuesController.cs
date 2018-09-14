@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Driver;
+using MongoDB.Driver.Builders;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace TodoApi.Controllers
 {
@@ -14,7 +19,19 @@ namespace TodoApi.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "Ed10", "Ed11" };
+            MongoClient _client;
+            MongoServer _server;
+            MongoDatabase _db;
+
+             _client = new MongoClient("mongodb://testdbuser:testpass@mongodb");
+            _server = _client.GetServer();
+            _db = _server.GetDatabase("sampledb");
+            var pairs = new List<String>();
+            foreach(Person pair in _db.GetCollection<Person>("person").FindAll())
+            {
+               pairs.Add(pair.name); 
+            } 
+            return pairs;
         }
 
         // GET api/values/5
@@ -41,5 +58,12 @@ namespace TodoApi.Controllers
         public void Delete(int id)
         {
         }
+    }
+
+    public class Person
+    {
+        public ObjectId Id { get; set; }
+        [BsonElement("name")]
+        public string name{get;set;}
     }
 }
