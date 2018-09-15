@@ -31,6 +31,10 @@ namespace TodoApi.Controllers
             {
                pairs.Add(pair.name); 
             } 
+
+            string text = System.IO.File.ReadAllText(@"/var/run/secrets/mongodb/account/database-name");
+            pairs.Add(text);
+
             return pairs;
         }
 
