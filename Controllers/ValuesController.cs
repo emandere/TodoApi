@@ -23,17 +23,18 @@ namespace TodoApi.Controllers
             MongoServer _server;
             MongoDatabase _db;
 
-             _client = new MongoClient("mongodb://testdbuser:testpass@mongodb/sampledb");
+            string databasename = System.IO.File.ReadAllText(@"/var/run/secrets/mongodb/account/database-name");
+            string databaseuser = System.IO.File.ReadAllText(@"/var/run/secrets/mongodb/account/database-user");
+            string databasepass = System.IO.File.ReadAllText(@"/var/run/secrets/mongodb/account/database-password");
+
+             _client = new MongoClient($"mongodb://${databaseuser}:${databasepass}@mongodb/${databasename}");
             _server = _client.GetServer();
-            _db = _server.GetDatabase("sampledb");
+            _db = _server.GetDatabase(databasename);
             var pairs = new List<String>();
             foreach(Person pair in _db.GetCollection<Person>("people").FindAll())
             {
                pairs.Add(pair.name); 
             } 
-
-            string text = System.IO.File.ReadAllText(@"/var/run/secrets/mongodb/account/database-name");
-            pairs.Add(text);
 
             return pairs;
         }
